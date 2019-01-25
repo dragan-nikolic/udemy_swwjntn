@@ -25,3 +25,6 @@ hs_err_pid*
 # IDEs
 .vscode
 /.metadata/
+
+# Mac
+.DS_Store
