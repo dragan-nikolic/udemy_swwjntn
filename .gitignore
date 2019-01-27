@@ -29,6 +29,6 @@ hs_err_pid*
 # Mac
 .DS_Store
 
-/*.classpath
-/*.project
-/*.settings
+.classpath
+.project
+.settings
