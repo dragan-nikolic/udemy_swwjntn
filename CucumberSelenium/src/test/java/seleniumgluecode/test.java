@@ -13,7 +13,9 @@ public class test {
     
     @Given("^user is on homepage$")
     public void user_is_on_homepage() throws Throwable {     
-    	System.setProperty("webdriver.gecko.driver","/Users/Documents/geckodriver");
+		System.setProperty(
+				"webdriver.gecko.driver", 
+				"C:\\devh\\libs\\selenium\\geckodriver.exe");
         driver = new FirefoxDriver();
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         driver.get("http://automationpractice.com/index.php");
