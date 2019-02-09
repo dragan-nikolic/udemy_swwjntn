@@ -1,8 +1,5 @@
 package udemy;
 
-import org.junit.Test;
-
-import static org.junit.Assert.*;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
@@ -40,5 +37,4 @@ public class JUnitIntroductionTest {
 	public void test2() {
 		System.out.println("Executed Test2...");
 	}
-
 }
