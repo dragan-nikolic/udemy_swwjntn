@@ -1,15 +1,14 @@
-package udemy;
+package basicweb;
 
 import java.util.concurrent.TimeUnit;
 
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
-public class BasicActionsTest {
+public class NavigatingBetweenPages {
 	WebDriver driver;
 	String baseUrl;
 
@@ -20,22 +19,9 @@ public class BasicActionsTest {
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		driver.manage().window().maximize();
 	}
-	
-	@Test
-	public void testBasicActions() {
-		driver.get(baseUrl);
-		driver.findElement(By.xpath("//div[@id='navbar']//a[@href='/sign_in']")).click();
-		System.out.println("Clicked on login");
-		driver.findElement(By.id("user_email")).sendKeys("test@email.com");
-		System.out.println("Sending keys to username field");
-		driver.findElement(By.id("user_password")).sendKeys("test");
-		System.out.println("Sending keys to password field");
-		driver.findElement(By.id("user_email")).clear();
-		System.out.println("Clearing the username field");
-	}
 
 	@Test
-	public void testNavigatingBetweenPages() throws InterruptedException {
+	public void test() throws InterruptedException {
 		driver.get(baseUrl);
 		String title = driver.getTitle();
 		System.out.println("Title of the page is: " + title);
@@ -78,9 +64,9 @@ public class BasicActionsTest {
 		String pageSource = driver.getPageSource();
 		System.out.println(pageSource);
 	}
-
+	
 	@After
 	public void tearDown() throws Exception {
-		driver.quit();
+		// driver.quit();
 	}
 }
