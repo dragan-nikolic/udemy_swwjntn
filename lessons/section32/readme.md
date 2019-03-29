@@ -22,7 +22,11 @@ use archetype-quickstart-jdk8
 
 ### How to run tests
 
+#### Run all tests
 `mvn test`
+
+#### Run single tests
+`mvn test -Dtest=<classname>#<testname>`
 
 ## Add Dependencies
 
